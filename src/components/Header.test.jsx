@@ -32,15 +32,10 @@ describe("Header Component", () => {
     const hamburger = screen.getByRole("button");
     fireEvent.click(hamburger);
 
-    // Use findAllByText to get all "Favourites" links
     const favouritesLinks = await screen.findAllByText(/favourites/i);
-    expect(favouritesLinks.length).toBeGreaterThan(0); // or === 2 if you expect both desktop and mobile
+    expect(favouritesLinks.length).toBeGreaterThan(0);
 
-    // Close the mobile menu
     const buttons = screen.getAllByRole("button");
-    fireEvent.click(buttons[1]); // assuming the second button is the close button
-
-    // Optionally check if mobile menu is gone
-    // e.g., check if the mobile menu is not in the DOM anymore
+    fireEvent.click(buttons[1]);
   });
 });
