@@ -20,7 +20,6 @@ const Header = () => {
 
   return (
     <div className="flex flex-col md:flex-row gap-3 justify-between p-2 lg:p-5 relative">
-      {/* Logo and Hamburger */}
       <div className="font-bold flex items-center gap-5 text-lg lg:text-2xl">
         <button
           className="lg:hidden cursor-pointer"
@@ -66,7 +65,7 @@ const Header = () => {
         </li>
       </ul>
 
-      {/* Mobile Menu (conditionally visible) */}
+      {/* Mobile Menu */}
       {menu && (
         <div className="absolute top-0 left-0 h-screen bg-white w-[60%] z-50 p-4 shadow-md md:hidden">
           <div className="flex justify-end items-center mb-4">

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToFavourite, removeFromFavourites } from "../redux/favouritesSlice";
 
 const ProductDetails = () => {
-  const { id } = useParams(); // get product ID from URL
+  const { id } = useParams();
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
   const { favourites } = useSelector((state) => state.favourites);
