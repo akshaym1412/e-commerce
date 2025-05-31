@@ -1,12 +1,65 @@
-# React + Vite
+# E-Commerce Product Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive product dashboard built with React, Redux Toolkit, and Tailwind CSS.  
+Fetches products from the Fake Store API, supports searching, filtering, favorites, and detailed product views.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+[Live Demo on Vercel](https://e-commerce-ebon-two-9xih5tvwpq.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- Product Listing with responsive grid layout
+- Search by product title (debounced input)
+- Filter products by category
+- Sort products by price (ascending/descending)
+- Product Detail page with full product information
+- Add and remove products from favorites (stored in Redux)
+- Favorites page to view and manage favorite products
+- State management using Redux Toolkit and async thunks
+- Unit and integration tests with Jest and React Testing Library
+- Responsive and accessible UI styled with Tailwind CSS
+
+---
+
+## Tech Stack
+
+- React 18
+- Redux Toolkit
+- React Router DOM
+- Axios (for API calls)
+- Tailwind CSS
+- Jest & React Testing Library (for testing)
+- Vercel (for deployment)
+
+---
+
+## Setup Instructions
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/e-commerce-dashboard.git
+   cd e-commerce-dashboard
+
+   ```
+
+2. **Install dependencies**
+
+   npm install
+
+   # or
+
+   yarn install
+
+3. **Start the Deployment Server**
+
+npm run dev
+
+# or
+
+yarn dev

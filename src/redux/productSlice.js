@@ -3,9 +3,13 @@ import axios from "axios";
 
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
-  async () => {
-    const res = await axios.get("https://fakestoreapi.com/products");
-    return res.data;
+  async (_, { rejectWithValue }) => {
+    try {
+      const res = await axios.get("https://fakestoreapi.com/products");
+      return res.data;
+    } catch (err) {
+      return rejectWithValue(err.response?.data?.message || err.message);
+    }
   }
 );
 
@@ -26,9 +30,9 @@ const productSlice = createSlice({
         state.loading = false;
         state.products = action.payload;
       })
-      .addCase(fetchProducts.rejected, (state) => {
+      .addCase(fetchProducts.rejected, (state, action) => {
         state.loading = false;
-        state.error = "Somthing went wrong";
+        state.error = action.payload || "Something went wrong";
       });
   },
 });
